@@ -1,74 +1,48 @@
 <template>
   <div>
-    <nav
-      class="navbar header has-shadow is-primary"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div class="navbar-brand">
-        <a
-          class="navbar-item"
-          href="/"
-        >
-          <img
-            src="~assets/buefy.png"
-            alt="Buefy"
-            height="28"
-          >
-        </a>
-
-        <div class="navbar-burger">
-          <span />
-          <span />
-          <span />
+    <!-- <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand mh-logo">
+           <Logo class="mh-logo" />
+         </div>
+        <div class="navbar-menu" id="navMenu">
+          <div class="navbar-start"></div>
+          <div class="navbar-end"><a class="navbar-item" href="/mentorship">Mentorship</a>
+            <div class="navbar-item"><a class="button is-primary is-outlined is-rounded" href="/contact">Say Hello</a></div>
+          </div>
         </div>
       </div>
-    </nav>
+    </nav> -->
 
-    <section class="main-content columns">
-      <aside class="column is-2 section">
-        <p class="menu-label is-hidden-touch">
-          General
-        </p>
-        <ul class="menu-list">
-          <li
-            v-for="(item, key) of items"
-            :key="key"
-          >
-            <nuxt-link
-              :to="item.to"
-              exact-active-class="is-active"
-            >
-              <b-icon :icon="item.icon" /> {{ item.title }}
-            </nuxt-link>
-          </li>
-        </ul>
-      </aside>
-
-      <div class="container column is-10">
-        <nuxt />
-      </div>
+    <section class="main-content">
+      <nuxt />
     </section>
   </div>
 </template>
 
 <script>
+import Logo from '~/components/Logo'
+
 export default {
+  components: {
+    Logo
+  },
   data () {
     return {
-      items: [
-        {
-          title: 'Home',
-          icon: 'home',
-          to: { name: 'index' }
-        },
-        {
-          title: 'Inspire',
-          icon: 'lightbulb',
-          to: { name: 'inspire' }
-        }
-      ]
     }
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.navbar{
+  padding: 20px 0px;
+
+  .mh-logo {
+    font-weight:bold;
+    text-transform: uppercase;
+    display:flex;
+    align-items:center;
+  }
+}
+</style>

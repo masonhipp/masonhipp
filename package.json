@@ -9,12 +9,17 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "test": "jest"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "node-sass": "^4.13.0",
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.3.2",
-    "@nuxtjs/axios": "^5.3.6"
+    "nuxt-svg-loader": "^1.0.1",
+    "push-dir": "^0.4.1",
+    "sass-loader": "^8.0.0"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.27",

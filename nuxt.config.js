@@ -23,6 +23,7 @@ export default {
   ** Global CSS
   */
   css: [
+    { src: '~assets/css/main.scss', lang: 'scss' }
   ],
   /*
   ** Plugins to load before mounting the App
@@ -42,6 +43,7 @@ export default {
     'nuxt-buefy',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    'nuxt-svg-loader'
   ],
   /*
   ** Axios module configuration
