@@ -4,7 +4,7 @@
     <!-- <div class="profile-bg">
       <profileBg />
     </div> -->
-    <div class="columns is-vcentered is-centered">
+    <div class="columns is-vcentered is-centered has-text-centered-mobile">
       <div class="column"></div>
       <div class="column is-4">
         
@@ -18,19 +18,19 @@
       <h1 class="title is-1">👋Hi, I'm Mason Hipp</h1>
       <p class="subtitle is-3">My passion is creating and scaling software companies.</p>
       <p class="subtitle is-3"> I strive to design beautiful products, create lovable user experiences, and grow businesses with strong remote teams and a culture of delighting customers.</p>
-      <div class="button is-large is-pink">See my work</div>
+      <a href="#recentWork" class="button is-large is-pink">See my work</a>
       </div>
       
       </div>
       <div class="column"></div>
     </div>
   </section>
-  <section class="hero is-light has-text-centered">
+  <section class="hero is-light has-text-centered" id="recentWork">
   <div class="hero-body">
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-three-fifths ">
-          <h1 class="title is-spaced">
+          <h1 class="title is-spaced" >
             Recent Work
           </h1>
           <h2 class="subtitle">
@@ -157,6 +157,12 @@ export default {
   position: relative;
   display: block;
   max-height:100%;
+  max-width: 50vw;
+  text-align:center;
+  margin: auto;
+  max-height:60vw;
+  overflow: hidden;
+  border-radius:5px;
 
   img {
     padding:0px;
@@ -165,6 +171,7 @@ export default {
     overflow:hidden;
     max-height: 100%;
     width:auto;
+    margin: auto;
   }
 }
 
@@ -177,7 +184,6 @@ figure.image {
   position:relative;
   border-radius:20px;
   overflow:hidden;
-
   color: white;
 
   img{
